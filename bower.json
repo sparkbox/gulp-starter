@@ -1,0 +1,34 @@
+{
+  "name": "templates",
+  "version": "0.1.0",
+  "authors": [
+    "Adam Simpson <adam@heysparkbox.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.x",
+    "modernizr": "~2.8.3",
+    "jasmine-jquery": "~2.0.5"
+  },
+  "overrides": {
+    "jasmine-jquery": {
+      "ignore": true
+    },
+    "modernizr": {
+      "ignore": true
+    },
+    "jquery": {
+      "main": {
+        "development": "dist/jquery.js",
+        "production": "dist/jquery.min.js"
+      }
+    }
+  }
+}

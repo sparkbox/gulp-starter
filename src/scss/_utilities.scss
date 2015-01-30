@@ -1,0 +1,35 @@
+.visuallyhidden {
+  position: absolute; 
+  overflow: hidden; 
+  clip: rect(0 0 0 0); 
+  height: 1px; width: 1px; 
+  margin: -1px; padding: 0; border: 0; 
+}
+
+.inline-block {
+  display: inline-block;
+  margin-right: -5px;
+
+  .lt-ie8 & {
+    zoom: 1;
+    display: inline;
+  }
+}
+
+.block {
+  display: block;
+}
+
+.no-list-style {
+  list-style: none;
+}
+
+.no-list-space {
+  margin: 0;
+  padding-left: 0;
+}
+
+.shadow-outline {
+  box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.1), -1px -1px 5px 1px rgba(0,0,0,0.1)
+}
+

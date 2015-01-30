@@ -1,0 +1,14 @@
+dependencies:
+  post:
+    - node_modules/.bin/bower install
+
+test:
+  override:
+    - ./node_modules/.bin/gulp ci
+
+deployment:
+  staging:
+    branch: master
+    commands:
+      - ./node_modules/.bin/divshot deploy staging --token $DivshotToken
+      - ./node_modules/.bin/gulp test-perf

@@ -1,0 +1,63 @@
+.tx-uppercase {
+  text-transform: uppercase;
+}
+
+.tx-no-underline {
+  text-decoration: none;
+}
+
+.tx-underline {
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: .03em;
+  font-weight: normal;
+}
+
+.tx-lg {
+  font-size: 1.8em;
+}
+
+.tx-md {
+  font-size: 1.1em;
+}
+
+
+.tx-center {
+  text-align: center;
+}
+
+label {
+  .faux-header {
+    @include rem(font-size, 1.3);
+  }
+}
+
+.tx-body_md {
+  font-size: 1.2em;
+}
+
+.tx-body_lg {
+  font-size: 1.3em;
+}
+
+.tx-small {
+  font-size: .8em;
+}
+
+.tx-big {
+  font-size: 1.3em;
+}
+
+.tx-lg {
+  font-size: 2em;
+}
+
+.tx-xl {
+  font-size: 2.5em;
+}
+
+.tx-xxl {
+  font-size: 3.5em;
+}

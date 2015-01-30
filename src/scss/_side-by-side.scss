@@ -1,0 +1,23 @@
+// These side-by-side classes are adopted 
+// from Bootstrap's Input Groups - http://getbootstrap.com/components/#input-groups
+
+.side-by-side--wrapper {
+  display: table;
+  border-collapse: separate;
+  width: 100%;
+}
+
+.side-by-side {
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.side-by-side--major {
+  float: left;
+  width: 100%;
+}
+
+.side-by-side--minor {
+  white-space: nowrap;
+  width: 1%;
+}

@@ -1,0 +1,48 @@
+<!doctype html>
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>{{ title }}</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="msapplication-TileColor" content="#73c5d3"/>
+  <meta name="msapplication-TileImage" content="sbx_144x144.png"/>
+  <!--[if (lt IE 9) & (!IEMobile)]>
+      <link href="/static/css/ataglance/no-mq-base.css" rel="stylesheet">
+      <![endif]-->
+      <!--[if (gte IE 9) | (IEMobile)]><!-->
+      <link href="/static/css/ataglance/mq-base.css" rel="stylesheet">
+      <!--<![endif]-->
+
+  <script src="/static/js/libs/modernizr.js"></script>
+</head>
+
+<body>
+
+  <!-- START header -->
+  <header role="banner">
+  </header>
+  <!-- END header -->
+
+  <!-- START main -->
+  <div class="clearfix sp_xl" role="main">
+  {% body %}
+  </div>
+  <!-- END main -->
+
+  <!-- START footer -->
+  <footer role="contentinfo">
+  </footer>
+  <!-- END footer -->
+
+  <script src="/static/js/app.js"></script>
+  <script src="/static/js/styleguide.js"></script>
+  <script>
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+</body>
+</html>

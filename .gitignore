@@ -1,0 +1,5 @@
+bower_components/*
+build/*
+.divshot-cache
+node_modules/
+.DS_Store

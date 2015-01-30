@@ -1,0 +1,11 @@
+.pl-max-width {
+  width: 95%;
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pl-max-width_relative {
+  @extend .pl-max-width;
+  position: relative;
+}

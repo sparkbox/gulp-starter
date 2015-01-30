@@ -1,0 +1,154 @@
+$sp_sm: 0.5em;
+$sp_md: 1em;
+$sp_lg: 1.5em;
+$sp_xl: 2.5em;
+$sp_xxl: 4.5em;
+
+//--- Named spacing classes ---//
+.sp_none {
+  margin: 0;
+}
+
+.sp {
+  margin-bottom: $sp_md;
+}
+
+.sp_none {
+  margin: 0;
+}
+
+.sp_all {
+  margin: $sp_md;
+}
+
+.sp_sm {
+  margin-bottom: $sp_sm;
+}
+
+.sp_lg {
+  margin-bottom: $sp_lg;
+}
+
+.sp_xl {
+  margin-bottom: $sp_xl;
+}
+
+.sp_xxl {
+  margin-bottom: $sp_xxl;
+}
+
+.sp_top_sm {
+  margin-top: $sp_sm;
+}
+
+.sp_top {
+  margin-top: $sp_md;
+}
+
+.sp_left {
+  margin-left: $sp_md;
+}
+
+.sp_right {
+  margin-right: $sp_md;
+}
+
+.sp_right_sm {
+  margin-right: $sp_sm;
+}
+
+.sp_left_sm {
+  margin-left: $sp_sm;
+}
+
+.sp_horizontal {
+  @extend .sp_right;
+  @extend .sp_left;
+}
+
+.sp_horizontal_sm {
+  @extend .sp_right_sm;
+  @extend .sp_left_sm;
+}
+
+.sp_bottom {
+  margin-bottom: $sp_md;
+}
+
+.pd_all_sm {
+  padding: $sp_sm;
+}
+
+.pd_all_xl {
+  padding: $sp_xl;
+}
+
+.pd_all {
+  padding: $sp_md;
+}
+
+.pd_left_sm {
+  padding-left: $sp_sm;
+}
+
+.pd_left {
+  padding-left: $sp_md;
+}
+
+.pd_right_sm {
+  padding-right: $sp_sm;
+}
+
+.pd_right {
+  padding-right: $sp_md;
+}
+
+.pd_horizontal_sm {
+  @extend .pd_left_sm;
+  @extend .pd_right_sm;
+}
+
+.pd_horizontal {
+  @extend .pd_left;
+  @extend .pd_right;
+}
+
+.pd_vertical_sm {
+  @extend .pd_top_sm;
+  @extend .pd_sm;
+}
+
+.pd_vertical_lg {
+  @extend .pd_top_lg;
+  @extend .pd_lg;
+}
+
+.pd_vertical {
+  @extend .pd_top;
+  @extend .pd;
+}
+
+.pd {
+  padding-bottom: $sp_md;
+}
+
+.pd_sm {
+  padding-bottom: $sp_sm;
+}
+
+.pd_lg {
+  padding-bottom: $sp_lg;
+}
+
+.pd_top {
+  padding-top: $sp_md;
+}
+
+.pd_top_sm {
+  padding-top: $sp_sm;
+}
+
+.pd_top_lg {
+  padding-top: $sp_lg;
+}
+

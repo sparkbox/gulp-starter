@@ -1,0 +1,73 @@
+@mixin intrinsic-ratio($w, $h) {
+  // Use this mixin when you want to make
+  // an element with no intrinsic height
+  // to scale with a given ratio as an image would.
+
+  // NOTE: This forces a width of 100%, as the height
+  // is based on the parent's width.
+  // If you want an icon to be a width other than 100%,
+  // put that width on a wrapper
+
+  $ratio: $h/$w;
+  $percentage: $ratio * 100%;
+
+  width: 100%;
+  height: 0;
+  padding-bottom: $percentage;
+}
+
+@mixin sb-media($query) {
+  $no-mq-support: false !default;
+  $serve-to-nomq-max-width: 63em;
+
+  @if $no-mq-support{
+    @if $query < $serve-to-nomq-max-width {
+      @content;
+    }
+  } @else {
+    @media ( min-width: + $query ) {
+      @content;
+    }
+  }
+}
+
+@mixin rem( $property, $a:0, $b:$a, $c:$a, $d:$b ) {
+  $base-font-multiplier: 1 !default;
+
+// Font Families
+  @if ( $property == "font-size" ) {
+    // $a is the font size
+    // %b is the keyword
+    @if ( $a != $b ) {
+      font-size: $b;
+    }
+    @else {
+      font-size: $a * $base-font-multiplier * 16px;
+    }
+    font-size: $a * 1rem;
+  } @else {
+    $apx: $a * $base-font-multiplier * 16px;
+    $bpx: $b * $base-font-multiplier * 16px;
+    $cpx: $c * $base-font-multiplier * 16px;
+    $dpx: $d * $base-font-multiplier * 16px;
+    $arem: $a * 1rem;
+    $brem: $b * 1rem;
+    $crem: $c * 1rem;
+    $drem: $d * 1rem;
+
+    @if ( $property == "padding" or $property == "margin" ){
+      #{$property}: $apx $bpx $cpx $dpx;
+      #{$property}: $arem $brem $crem $drem;
+    } @else {
+      #{$property}: $apx;
+      #{$property}: $arem;
+    }
+  }
+}
+
+%strip_input {
+  border: none;
+  border-radius: 0;
+  background: none;
+}
+
