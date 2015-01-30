@@ -1,5 +1,15 @@
 README
 ===========
+
+### Getting Startd
+
+1. `npm install -g gulp`
+2. `npm install`
+3. `bower install`
+4. `gulp` (or [this one cool trick](#errors))
+
+Open your browser to http://0.0.0.0:8000
+
 ### Icons
 
 We are using [Grunticon](https://github.com/filamentgroup/grunticon) to generate SVG stylesheets and appropriate fallbacks for all icons. To install grunt on your system simply re-run `npm install`.
