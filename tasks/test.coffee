@@ -1,6 +1,8 @@
 module.exports = (gulp, cfg, env) ->
   jasmine = require "gulp-jasmine-phantom"
   webpagetest = require "webpagetest"
+  jscs = require 'gulp-jscs'
+
 
   gulp.task "tests-integration", ->
     gulp.src([
@@ -54,4 +56,8 @@ module.exports = (gulp, cfg, env) ->
 
       checkStatus()
 
-  gulp.task "test", ['tests-integration', 'tests-unit']
+  gulp.task 'jsstyle-tests', ->
+    gulp.src(['!specs/integration/lib/*.js', 'specs/**/*.js'])
+      .pipe(jscs())
+
+  gulp.task "test", ['jsstyle-tests', 'tests-integration', 'tests-unit']
