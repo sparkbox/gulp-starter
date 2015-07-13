@@ -1,0 +1,99 @@
+{
+  "disallowMultipleLineStrings": true,
+  "disallowMixedSpacesAndTabs": "smart",
+  "disallowSpacesInsideArrayBrackets": "all",
+  "requireSpaceBeforeObjectValues": true,
+  "requireCommaBeforeLineBreak": true,
+  "requireBlocksOnNewline": 1,
+  "disallowKeywordsOnNewLine": ["else"],
+  "disallowKeywords": [ "with" ],
+  "disallowNewlineBeforeBlockStatements": true,
+  "requireSpacesInFunctionExpression": {
+    "beforeOpeningCurlyBrace": true
+  },
+  "requireSpacesInConditionalExpression": {
+    "afterTest": true,
+    "beforeConsequent": true,
+    "afterConsequent": true,
+    "beforeAlternate": true
+  },
+  "disallowSpacesInCallExpression": true,
+  "disallowEmptyBlocks": true,
+  "requireSpacesInsideObjectBrackets": "all",
+  "requireCurlyBraces": [
+    "if",
+    "else",
+    "for",
+    "while",
+    "do",
+    "try",
+    "catch"
+  ],
+  "requireLineFeedAtFileEnd": true,
+  "disallowTrailingWhitespace": true,
+  "disallowTrailingComma": true,
+  "requireSpaceBeforeBlockStatements": true,
+  "validateIndentation": 2,
+  "validateParameterSeparator": ", ",
+  "requireSpaceAfterBinaryOperators": true,
+  "requireSpaceBeforeKeywords": [
+    "else",
+    "while",
+    "catch"
+  ],
+  "requireSpaceBeforeBinaryOperators": [
+    "=", "+=", "-=", "*=", "/=", "%=", "<<=", ">>=", ">>>=",
+    "&=", "|=", "^=", "+=",
+
+    "+", "-", "*", "/", "%", "<<", ">>", ">>>", "&",
+    "|", "^", "&&", "||", "===", "==", ">=",
+    "<=", "<", ">", "!=", "!=="
+  ],
+  "requireSpaceAfterKeywords": [
+    "do",
+    "for",
+    "if",
+    "else",
+    "switch",
+    "case",
+    "try",
+    "while",
+    "with",
+    "return"
+  ],
+  "requireSpacesInAnonymousFunctionExpression": {
+    "beforeOpeningCurlyBrace": true
+  },
+  "disallowSpacesInAnonymousFunctionExpression": {
+    "beforeOpeningRoundBrace": true
+  },
+  "requireSpaceBetweenArguments": true,
+  "requireOperatorBeforeLineBreak": true,
+  "requireParenthesesAroundIIFE": true,
+  "requireMultipleVarDecl": "onevar",
+  "requireDotNotation": true,
+  "maximumLineLength": {
+    "value": 120,
+    "tabSize": 2,
+    "allowUrlComments": true,
+    "allowRegex": true
+  },
+  "requireSpacesInNamedFunctionExpression": {
+    "beforeOpeningCurlyBrace": true
+  },
+  "disallowSpacesInNamedFunctionExpression": {
+    "beforeOpeningRoundBrace": true
+  },
+  "disallowSpaceAfterObjectKeys": true,
+  "disallowSpaceAfterPrefixUnaryOperators": true,
+  "disallowSpaceBeforePostfixUnaryOperators": true,
+  "disallowSpaceBeforeBinaryOperators": [ ",", ":" ],
+  "plugins": [
+    "jscs-jsdoc"
+  ],
+  "jsDoc": {
+    "checkAnnotations": true,
+    "checkTypes": true,
+    "enforceExistence": "exceptExports"
+  }
+}

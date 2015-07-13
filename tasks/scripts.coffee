@@ -1,4 +1,6 @@
 module.exports = (gulp, cfg, env) ->
+  jshint = require 'gulp-jshint'
+  jscs = require 'gulp-jscs'
   concat = require "gulp-concat"
   uglify = require "gulp-uglify"
   order = require "gulp-order"
@@ -14,7 +16,17 @@ module.exports = (gulp, cfg, env) ->
     return gulp.src("bower_components/modernizr/modernizr.js")
     .pipe gulp.dest(cfg.paths.scriptsOut + 'libs/')
 
-  gulp.task "scripts", ['moveModernizr'], ->
+  gulp.task 'jsstyle', ->
+    gulp.src("src/js/**/*.js")
+      .pipe(jscs())
+
+  gulp.task 'jshint', ->
+    gulp.src('src/js/**/*.js')
+      .pipe jshint()
+      .pipe jshint.reporter('jshint-stylish')
+      .pipe jshint.reporter('fail')
+
+  gulp.task "concat-all-js", ['moveModernizr'], ->
     bowerFiles = gulp.src(mainBowerFiles(
       env: env
     ), base: 'bower_components')
@@ -45,3 +57,5 @@ module.exports = (gulp, cfg, env) ->
     coffeeJS = gulp.src("src/coffee/*.coffee")
       .pipe(coffee(bare: true))
       .pipe gulp.dest(cfg.paths.scriptsOut)
+
+  gulp.task 'scripts', ['concat-all-js', 'jsstyle']
