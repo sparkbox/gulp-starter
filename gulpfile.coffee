@@ -8,7 +8,7 @@ config =
     dest: 'build/'
 
     assets: 'src/assets/'
-    scriptsIn: 'src/coffee/'
+    scriptsIn: 'src/js/'
     stylesIn: 'src/scss/'
     testsIn: 'specs/'
     vendorIn: 'src/vendor/'
