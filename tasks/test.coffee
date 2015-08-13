@@ -60,4 +60,4 @@ module.exports = (gulp, cfg, env) ->
     gulp.src(['!specs/integration/lib/*.js', 'specs/**/*.js'])
       .pipe(jscs())
 
-  gulp.task "test", ['jsstyle-tests', 'tests-integration', 'tests-unit']
+  gulp.task "test", ['jsstyle-tests', 'jshint', 'tests-integration', 'tests-unit']
