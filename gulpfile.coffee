@@ -8,7 +8,7 @@ config =
     dest: 'build/'
 
     assets: 'src/assets/'
-    scriptsIn: 'src/coffee/'
+    scriptsIn: 'src/js/'
     stylesIn: 'src/scss/'
     testsIn: 'specs/'
     vendorIn: 'src/vendor/'
@@ -46,7 +46,7 @@ gulp.task "build", (callback) ->
   )
 
 gulp.task "default", (callback) ->
-  runSequence('watch', 'build', 'server', callback)
+  runSequence('build', 'watch', 'server', callback)
 
 gulp.task "ci", (callback) ->
-  runSequence('build', callback)
+  runSequence('jsstyle-tests', 'jshint', 'build', callback)
