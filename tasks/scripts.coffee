@@ -35,27 +35,20 @@ module.exports = (gulp, cfg, env) ->
       cfg.paths.vendorIn + '**/*.js'
     ])
 
-    coffeeJS = gulp.src("src/coffee/*.coffee")
-      .pipe(coffee(bare: true))
-      .pipe gulp.dest(cfg.paths.scriptsOut)
+    appJS = gulp.src("src/js/*.js")
 
-    merge(bowerFiles, coffeeJS, otherJS)
+    merge(bowerFiles, appJS, otherJS)
       .pipe order([
         "bower_components/jquery/**/*.js"
         "bower_components/**/*.js"
         cfg.paths.vendorIn + '**/*.js'
-        "src/coffee/*.js"
+        "src/js/*.js"
       ], base: './')
       .pipe gulpif((env is 'development'), sourcemaps.init())
       .pipe plumber(errorHandler: errorHandler.error)
       .pipe concat("app.js")
       .pipe gulpif((env is 'production'), uglify())
       .pipe gulpif((env is 'development'), sourcemaps.write())
-      .pipe gulp.dest(cfg.paths.scriptsOut)
-
-  gulp.task "wpScripts", ['moveModernizr'], ->
-    coffeeJS = gulp.src("src/coffee/*.coffee")
-      .pipe(coffee(bare: true))
       .pipe gulp.dest(cfg.paths.scriptsOut)
 
   gulp.task 'scripts', ['concat-all-js', 'jsstyle']
